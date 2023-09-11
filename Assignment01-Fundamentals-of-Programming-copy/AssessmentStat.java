@@ -64,6 +64,37 @@ public class AssessmentStat {
         System.out.println("Minimum Mark: " + minMark);
         System.out.println("Maximum Mark: " + maxMark);
 
+        //Calculate and display the highest and lowest marks
+
+        int highestMark = findHighestMark(studentMarks);
+        int lowestMark = findLowestMark(studentMarks);
+
+        System.out.println("\nHighest Mark: " + highestMark);
+        System.out.println("Lowest Mark: " + lowestMark);
+
+        scanner.close();
+
+    }
+
+    //  Find the highest mark
+    public static int findHighestMark(int[] marks) {
+        int highest = marks[0];
+        for (int mark : marks) {
+            if (mark > highest) {
+                highest = mark;
+            }
+        }
+        return highest;
+    }
+    // Find the lowest mark
+    public static int findLowestMark(int[] marks) {
+        int lowest = marks[0];
+        for (int mark : marks) {
+            if (mark < lowest) {
+                lowest = mark;
+            }
+        }
+        return lowest;
     }
 
 }
