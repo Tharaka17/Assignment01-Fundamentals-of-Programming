@@ -64,6 +64,15 @@ public class AssessmentStat {
         System.out.println("Minimum Mark: " + minMark);
         System.out.println("Maximum Mark: " + maxMark);
 
+        /*  Algorithm 1 (Pseudo Code):
+          
+            1. Initialize `highestMark` and `lowestMark` as the first student's mark.
+            2. For each student's mark from the second student to the last student:
+               a. If the current mark is higher than `highestMark`, update `highestMark`.
+               b. If the current mark is lower than `lowestMark`, update `lowestMark`.
+            3. Print `highestMark` as the highest mark.
+            4. Print `lowestMark` as the lowest mark.*/
+            
         //Calculate and display the highest and lowest marks
 
         int highestMark = findHighestMark(studentMarks);
@@ -76,7 +85,7 @@ public class AssessmentStat {
 
     }
 
-    //  Find the highest mark
+    //  Algorithm 1 - Find the highest mark
     public static int findHighestMark(int[] marks) {
         int highest = marks[0];
         for (int mark : marks) {
@@ -86,7 +95,8 @@ public class AssessmentStat {
         }
         return highest;
     }
-    // Find the lowest mark
+    
+    // Algorithm 1 - Find the lowest mark
     public static int findLowestMark(int[] marks) {
         int lowest = marks[0];
         for (int mark : marks) {
