@@ -6,9 +6,9 @@ public class AssessmentStat {
 
         // Get the assessment name from the user
         System.out.print("Enter the  name: ");
-        String assessnmentName = scanner.nextLine();
+        String assessmentName = scanner.nextLine();
 
-        e an array to store 30 students marks 
+        //Create an array to store 30 students marks 
         int[] studentMarks = new int[30];
 
         //Get the marks for each student
@@ -56,6 +56,14 @@ public class AssessmentStat {
         }
 
         double averageMark = (double) totalMarks / numStudents;
+
+        System.out.println("\nAssessment Name: " + assessmentName);
+        System.out.println("Number of Students: " + numStudents);
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.println("Average Mark: " + averageMark);
+        System.out.println("Minimum Mark: " + minMark);
+        System.out.println("Maximum Mark: " + maxMark);
+
     }
 
 }
