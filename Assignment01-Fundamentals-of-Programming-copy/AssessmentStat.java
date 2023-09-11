@@ -8,7 +8,7 @@ public class AssessmentStat {
         System.out.print("Enter the  name: ");
         String assessnmentName = scanner.nextLine();
 
-        // Create an array to store 30 students marks 
+        e an array to store 30 students marks 
         int[] studentMarks = new int[30];
 
         //Get the marks for each student
@@ -35,6 +35,27 @@ public class AssessmentStat {
                     break; 
                 }
             }
+
         }
+
+        // To Cal the stat
+        int numStudents = 0; // If fewer than 30 students were entered, set the value to 0.
+        int totalMarks = 0;
+        int minMark = studentMarks[0];
+        int maxMark = studentMarks[0];
+
+        for (int j = 0; j < studentMarks.length && studentMarks[j] != 0; j++) {
+            numStudents++;
+            totalMarks += studentMarks[j];
+            if (studentMarks[j] < minMark) {
+                minMark = studentMarks[j];
+            }
+            if (studentMarks[j] > maxMark) {
+                maxMark = studentMarks[j];
+            }
+        }
+
+        double averageMark = (double) totalMarks / numStudents;
     }
+
 }
