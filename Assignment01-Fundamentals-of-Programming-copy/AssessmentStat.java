@@ -73,7 +73,7 @@ public class AssessmentStat {
         3. Print `highestMark` as the highest mark.
         4. Print `lowestMark` as the lowest mark.*/
 
-        // Step 5: Implement Algorithm 1 to print the highest and lowest marks
+        // Implement Algorithm 1 to print the highest and lowest marks
         int highestMark = studentMarks[0]; // Begin with the first student's mark.
         int lowestMark = studentMarks[0];  // Begin with the first student's mark.
 
@@ -86,10 +86,43 @@ public class AssessmentStat {
             }
         }
 
-        // Step 6: Display the highest and lowest marks
+        // Display the highest and lowest marks
         System.out.println("\nHighest Mark: " + highestMark);
         System.out.println("Lowest Mark: " + lowestMark);
+        
+        /*  Algorithm 2 (Pseudo Code):
+
+        1. Initialize `sum` as 0 and `sumSquares` as 0.
+        2. For each student's mark from the first student to the last student:
+           a. Add the current mark to `sum`.
+           b. Add the square of the current mark to `sumSquares`.
+        3. Calculate the mean as `sum` divided by the number of students.
+        4. Calculate the standard deviation as the square root of [(sum of squares - (sum * sum) / number of students) / (number of students - 1)].
+        5. Print the mean.
+        6. Print the standard deviation.*/
+        
+        // Step 7: Calculate the mean and standard deviation
+        
+        double sum = 0;
+        double sumSquares = 0;
+
+        for (int i = 0; i < studentMarks.length && studentMarks[i] != 0; i++) {
+            sum += studentMarks[i];
+            sumSquares += Math.pow(studentMarks[i], 2);
+        }
+
+        double mean = sum / numStudents;
+
+        double variance = (sumSquares - (Math.pow(sum, 2) / numStudents)) / (numStudents - 1);
+        double stdDeviation = Math.sqrt(variance);
+
+        // Step 8: Display the mean and standard deviation
+        System.out.println("\nMean: " + mean);
+        System.out.println("Standard Deviation: " + stdDeviation);
+
         scanner.close();
+        
+        
 
     }
 
