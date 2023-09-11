@@ -15,6 +15,14 @@ public class AssessmentStat {
         for (int i = 0; i < studentMarks.length; i++) {
             System.out.print("Please input the marks for Student " + (i + 1) + ": ");
             int mark = scanner.nextInt();
+            
+             // For check Validation of the mark
+            if (mark < 0 || mark > 30) {
+                System.out.println("Error: Invalid mark. Please enter a mark between 0 and 30.");
+                i--; 
+            } else {
+                studentMarks[i] = mark;
+            }
         }
     }
 }
