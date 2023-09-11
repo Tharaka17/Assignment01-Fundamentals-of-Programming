@@ -99,7 +99,7 @@ public class AssessmentStat {
         3. Calculate the mean as `sum` divided by the number of students.
         4. Calculate the standard deviation as the square root of [(sum of squares - (sum * sum) / number of students) / (number of students - 1)].
         5. Print the mean.
-        6. Print the standard deviation.*/
+        6. Print the standard dev.*/
         
         // Step 7: Calculate the mean and standard deviation
         
