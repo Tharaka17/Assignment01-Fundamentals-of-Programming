@@ -16,7 +16,7 @@ public class Assignment01
     public Assignment01()
     {
         // initialise instance variables
-        x = 0;
+        x = 1;
     }
 
     /**
