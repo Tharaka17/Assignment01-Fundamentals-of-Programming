@@ -65,46 +65,33 @@ public class AssessmentStat {
         System.out.println("Maximum Mark: " + maxMark);
 
         /*  Algorithm 1 (Pseudo Code):
-          
-            1. Initialize `highestMark` and `lowestMark` as the first student's mark.
-            2. For each student's mark from the second student to the last student:
-               a. If the current mark is higher than `highestMark`, update `highestMark`.
-               b. If the current mark is lower than `lowestMark`, update `lowestMark`.
-            3. Print `highestMark` as the highest mark.
-            4. Print `lowestMark` as the lowest mark.*/
-            
-        //Calculate and display the highest and lowest marks
 
-        int highestMark = findHighestMark(studentMarks);
-        int lowestMark = findLowestMark(studentMarks);
+        1. Initialize `highestMark` and `lowestMark` as the first student's mark.
+        2. For each student's mark from the second student to the last student:
+        a. If the current mark is higher than `highestMark`, update `highestMark`.
+        b. If the current mark is lower than `lowestMark`, update `lowestMark`.
+        3. Print `highestMark` as the highest mark.
+        4. Print `lowestMark` as the lowest mark.*/
 
+        // Step 5: Implement Algorithm 1 to print the highest and lowest marks
+        int highestMark = studentMarks[0]; // Begin with the first student's mark.
+        int lowestMark = studentMarks[0];  // Begin with the first student's mark.
+
+        for (int i = 1; i < studentMarks.length && studentMarks[i] != 0; i++) {
+            if (studentMarks[i] > highestMark) {
+                highestMark = studentMarks[i];
+            }
+            if (studentMarks[i] < lowestMark) {
+                lowestMark = studentMarks[i];
+            }
+        }
+
+        // Step 6: Display the highest and lowest marks
         System.out.println("\nHighest Mark: " + highestMark);
         System.out.println("Lowest Mark: " + lowestMark);
-
         scanner.close();
 
     }
 
-    //  Algorithm 1 - Find the highest mark
-    public static int findHighestMark(int[] marks) {
-        int highest = marks[0];
-        for (int mark : marks) {
-            if (mark > highest) {
-                highest = mark;
-            }
-        }
-        return highest;
-    }
-    
-    // Algorithm 1 - Find the lowest mark
-    public static int findLowestMark(int[] marks) {
-        int lowest = marks[0];
-        for (int mark : marks) {
-            if (mark < lowest) {
-                lowest = mark;
-            }
-        }
-        return lowest;
-    }
 
 }
